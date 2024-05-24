@@ -1,0 +1,3 @@
+<!-- - Crie um sistema de dificuldade do jogo, onde ao pressionar a tecla "N", o jogo fica mais simples (divida por 1.1 todos os atributos dos monstros gerados), e ao pressionar a tecla "M", o jogo fica mais difícil (multiplique por 1.1 todos os atributos dos monstros gerados). Os atributos dos monstros devem ser multiplicados pelo fator da dificuldade e convertidos para um tipo inteiro;
+
+- Coloque, no canto superior direito da tela, um número do tipo `float`, com quatro casas decimais, representando o índice de dificuldade do jogo. -->
