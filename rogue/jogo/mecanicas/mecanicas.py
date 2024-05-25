@@ -46,6 +46,11 @@ def existe_obstaculo(posicao, npc):
     return False
 
 # Operação principal do jogo
+
+
+
+
+""" agr movimentar precisa de dificuldade """
 def movimentar(aventureiro, direcao, npc, dificuldade):
     pos_futura = aventureiro.calcular_pos_futura(direcao)
     if existe_obstaculo(pos_futura, npc):
@@ -56,8 +61,15 @@ def movimentar(aventureiro, direcao, npc, dificuldade):
     efeito = random.choices(["nada", "monstro"], [0.6, 0.4])[0]
     if efeito == "monstro":
         monstro = random.choices([Leviathan, Ogro, Goblin], [1, 3, 10])[0]()
+
+
+
+        """ multiplica os atributos """
         monstro.forca *= dificuldade
         monstro.vida *= dificuldade
+
+
+        
 
         if iniciar_combate(aventureiro, monstro):
             aventureiro.status = f"{monstro.nome} foi derrotado!"
