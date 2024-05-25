@@ -21,16 +21,27 @@ class Tela:
         self.fonte_gde = pygame.font.SysFont(FONTE, GRID)
         self.fonte_peq = pygame.font.SysFont(FONTE, GRID // 2)
 
+
+
+    """ dificuldade é parametro agr """
     def renderizar(self, aventureiro, tesouro, npc, dificuldade):
         self.display.fill(CORES.preto)
         self.informacoes(aventureiro)
         self.personagem(tesouro)
+
+
+
+
+        
         """ aqui eu mexi hehe"
         self.renderizar_indice_dificuldade(dificuldade)
         self.personagem(aventureiro, cor=aventureiro.cor)
         self.personagem(npc)
         self.mapa(aventureiro, tesouro, npc)
         pygame.display.update()
+
+
+
 
     def mapa(self, aventureiro, tesouro, npc):
         texto = self.fonte_gde.render(".", True, CORES.branco)
@@ -55,6 +66,9 @@ class Tela:
         texto = self.fonte_peq.render(aventureiro.status, True, CORES.branco)
         self.display.blit(texto, [MARGEM, MARGEM])
 
+
+
+        
     """ Mexi aqui ó, isso num tinha """
     def renderizar_indice_dificuldade(self, dificuldade):
         dificuldade_txt = f"{(dificuldade.indice):.4f}"
