@@ -25,6 +25,7 @@ class Tela:
         self.display.fill(CORES.preto)
         self.informacoes(aventureiro)
         self.personagem(tesouro)
+        """ aqui eu mexi hehe"
         self.renderizar_indice_dificuldade(dificuldade)
         self.personagem(aventureiro, cor=aventureiro.cor)
         self.personagem(npc)
@@ -54,6 +55,7 @@ class Tela:
         texto = self.fonte_peq.render(aventureiro.status, True, CORES.branco)
         self.display.blit(texto, [MARGEM, MARGEM])
 
+    """ Mexi aqui ó, isso num tinha """
     def renderizar_indice_dificuldade(self, dificuldade):
         dificuldade_txt = f"{(dificuldade.indice):.4f}"
         texto = self.fonte_peq.render(dificuldade_txt, True, CORES.branco)
